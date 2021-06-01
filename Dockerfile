@@ -2,7 +2,7 @@ FROM ubuntu:xenial
 ENV KUSTOMIZE_VER 3.9.2
 ENV KUBECTL_VER 1.19.2
 
-RUN apt update && apt instal -y curl gettext git
+RUN apt update && apt install -y curl gettext git
 
 RUN curl -L https://github.com/kubernetes-sigs/kustomize/releases/download/v${KUSTOMIZE_VER}/kustomize_${KUSTOMIZE_VER}_linux_amd64  -o /usr/bin/kustomize \
     && chmod +x /usr/bin/kustomize
